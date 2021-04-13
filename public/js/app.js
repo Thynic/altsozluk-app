@@ -37,7 +37,10 @@ araForm.addEventListener('submit', (e) => {
                             if (anlam.orneklerListe) {
                                 anlam.orneklerListe.forEach((ornekM) => {
                                     const herOrnek = document.createElement('p')
-                                    herOrnek.textContent = '"' + ornekM.ornek + '"' + '    -' + ornekM.yazar[0].tam_adi
+                                    herOrnek.textContent = '"' + ornekM.ornek + '"'
+                                    if(ornekM.yazar) {
+                                        herOrnek.textContent += '    -' + ornekM.yazar[0].tam_adi
+                                    }
                                     herOrnek.id = 'ornek'
                                     anlamlar.append(herOrnek)
                                 })
