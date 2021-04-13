@@ -1,5 +1,9 @@
+* {
+    background-color: #121212;
+}
+
 body {
-    color: #333333;
+    color: #dfdfdf;
     font-family: arial;
     max-width: 650px;
     max-height: 100px;
@@ -17,7 +21,7 @@ body {
 
 footer {
     color: #888888;
-    border-top: 1px solid #eeeeee;
+    border-top: 1px solid #888888;
     margin-top: 16px;
     padding: 16px 0;
 }
@@ -64,6 +68,7 @@ a {
 }
 
 input {
+    color: #dfdfdf;
     border: 1px solid #cccccc;
     padding: 8px;
 }
