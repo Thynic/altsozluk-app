@@ -27,11 +27,23 @@ araForm.addEventListener('submit', (e) => {
                         bulunan.textContent = fark.madde + ':'
 
                     anlamlar.append(bulunan)
-                    const tur = fark.anlamlarListe[0].ozelliklerListe[0].tam_adi
+                    let defaultTur = fark.anlamlarListe[0].ozelliklerListe[0].tam_adi
                     fark.anlamlarListe.forEach((anlam, index) => {
                         if(anlam) {
                             const herAnlam = document.createElement('p')
-                            herAnlam.textContent = anlam.anlam_sira + '. ' + tur + ': ' + anlam.anlam
+                            herAnlam.innerHTML = anlam.anlam_sira + '. '
+
+                            if(anlam.ozelliklerListe) {
+                                anlam.ozelliklerListe.forEach((ozellik, index) => {
+                                    herAnlam.innerHTML+= '<span id="tur">' + ozellik.tam_adi + '</span>'
+                                    if(anlam.ozelliklerListe[index+1])
+                                        herAnlam.innerHTML += ' '
+                                })
+                            } else {
+                                herAnlam.innerHTML += '<span id="tur">' + defaultTur + '</span>'
+                            }
+
+                            herAnlam.innerHTML += ': ' + anlam.anlam
                             herAnlam.id = 'kelime'
                             anlamlar.append(herAnlam)
                             if (anlam.orneklerListe) {
