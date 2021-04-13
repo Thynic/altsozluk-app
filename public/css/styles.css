@@ -2,6 +2,10 @@
     background-color: #121212;
 }
 
+p {
+    font-size: 20px;
+}
+
 body {
     color: #dfdfdf;
     font-family: arial;
@@ -24,6 +28,7 @@ footer {
     border-top: 1px solid #888888;
     margin-top: 16px;
     padding: 16px 0;
+    font-size: 17px;
 }
 
 header {
@@ -40,10 +45,11 @@ header a {
     color: #888888;
     margin-right: 16px;
     text-decoration: none;
+    font-size: 20px;
 }
 
 #baslik {
-    font-style: oblique;      
+    font-style: oblique;
 }
 
 #lisan, #tur {
@@ -58,10 +64,6 @@ header a {
     margin-left: 30px;
 }
 
-/* #anlamlar {
-    font-size: 
-} */
-
 a {
     color: #923737;
     text-decoration: solid;
@@ -69,15 +71,19 @@ a {
 
 input {
     color: #dfdfdf;
-    border: 1px solid #cccccc;
+    border: 1px solid #dfdfdf;
     padding: 8px;
+    font-size: 25px;
+    border-radius: 7px;
 }
 
 button {
     cursor: pointer;
-    border: 1px solid #888888;
+    border: 1px solid #dfdfdf;
     background: #888888;
     color: white;
     padding: 8px;
+    font-size: 25px;
+    border-radius: 3px;
 }
 
