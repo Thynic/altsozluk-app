@@ -33,13 +33,13 @@ app.get('/about', (req,res) => {
     })
 })
 
-app.get('/help', (req,res) => {
-    res.render('help', {
-        message: '',
-        title: 'Yardım',
-        name: 'Thynic'
-    })
-})
+// app.get('/help', (req,res) => {
+//     res.render('help', {
+//         message: '',
+//         title: '',
+//         name: 'Thynic'
+//     })
+// })
 
 app.listen(port, () => {
     console.log('server is up on port ' + port)
